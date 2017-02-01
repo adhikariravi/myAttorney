@@ -1,12 +1,6 @@
 <?php
 
 require( "config.php" );
-?>
-
-
-<div class="container">
-
-  <?php
 $action = isset( $_GET['action'] ) ? $_GET['action'] : "";
 
 switch ( $action ) {
@@ -51,7 +45,3 @@ function homepage() {
 }
 
 ?>
-
-  </div>
-
-<?php require_once 'includes/footer.php' ?>
