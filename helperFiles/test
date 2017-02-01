@@ -1,0 +1,56 @@
+stdClass Object (
+---------------------------------------------------------------------------------------------------------------------------- 
+[destination_addresses] => 
+	Array (
+	 
+			[0] => Natole Rd, Patan 44600, Nepal 
+			[1] => Thapathali Road, Kathmandu 44600, Nepal 
+			[2] => Hemanta Marg, Kathmandu 44600, Nepal 
+			[3] => Pulchowk Gabahal Rd, Patan 44600, Nepal 
+			[4] => Adwait Marg, Kathmandu 44600, Nepal 
+			[5] => Tanka Prasad Ghumti Sadak, Kathmandu 44600, Nepal 
+			[6] => Gaurav Marg, Kathmandu 44600, Nepal 
+			[7] => Sama Marga, Kathmandu 44600, Nepal 
+			[8] => Putalisadak, Kathmandu 44600, Nepal 
+			[9] => Tanka Prasad Ghumti Sadak, Kathmandu 44600, Nepal 
+			[10] => Lal Colony Marga, Kathmandu 44600, Nepal 
+			[11] => VFS Australia/UK/Canada/Denmark/Greece/Ireland, Sama Marga, Kathmandu 44600, Nepal 
+			[12] => Putalisadak, Kathmandu 44600, Nepal 
+			[13] => Kumari Marg-1, Kathmandu 44600, Nepal 
+			[14] => Lal Durbar Marg Lal Durbar, Kathmandu 44600, Nepal 
+			[15] => Jeetjung Marg, Kathmandu 44600, Nepal [16] => Park Ln, Patan 44600, Nepal 
+			[17] => Tanka Prasad Ghumti Sadak, Kathmandu 44600, Nepal [18] => Bagmati Marg, Kathmandu 44600, Nepal 
+		) 
+-----------------------------------------------------------------------------------------------------------------------------
+
+[origin_addresses] => 
+	Array (
+	 
+						[0] => Jaya Bageshwori Road, Kathmandu 44600, Nepal 
+
+				) 
+----------------------------------------------------------------------------------------------------------------------------
+
+[rows] => 
+		Array ( 	[0] => stdClass Object (  	[elements] => Array (
+									
+									[0] => stdClass Object (
+									 
+													[distance] => 
+														stdClass Object ( 
+																				[text] => 6.6 km [value] => 6608 
+																			)
+																				[duration] => stdClass Object ( 
+																						[text] => 22 mins 
+																						[value] => 1296 
+																				
+																			) 
+									[status] => OK ) 
+									############################################################################################################
+									[1] => stdClass Object ( [distance] => stdClass Object ( [text] => 4.3 km [value] => 4258 ) [duration] => stdClass Object ( [text] => 14 mins [value] => 866 ) [status] => OK ) [2] => stdClass Object ( [distance] => stdClass Object ( [text] => 4.8 km [value] => 4834 ) [duration] => stdClass Object ( [text] => 15 mins [value] => 910 ) [status] => OK ) [3] => stdClass Object ( [distance] => stdClass Object ( [text] => 6.1 km [value] => 6094 ) [duration] => stdClass Object ( [text] => 20 mins [value] => 1229 ) [status] => OK ) [4] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.9 km [value] => 2903 ) [duration] => stdClass Object ( [text] => 11 mins [value] => 630 ) [status] => OK ) [5] => stdClass Object ( [distance] => stdClass Object ( [text] => 3.3 km [value] => 3302 ) [duration] => stdClass Object ( [text] => 10 mins [value] => 627 ) [status] => OK ) [6] => stdClass Object ( [distance] => stdClass Object ( [text] => 3.8 km [value] => 3810 ) [duration] => stdClass Object ( [text] => 12 mins [value] => 738 ) [status] => OK ) [7] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.0 km [value] => 2043 ) [duration] => stdClass Object ( [text] => 7 mins [value] => 390 ) [status] => OK ) [8] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.9 km [value] => 2902 ) [duration] => stdClass Object ( [text] => 9 mins [value] => 557 ) [status] => OK ) [9] => stdClass Object ( [distance] => stdClass Object ( [text] => 3.4 km [value] => 3358 ) [duration] => stdClass Object ( [text] => 11 mins [value] => 636 ) [status] => OK ) [10] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.5 km [value] => 2472 ) [duration] => stdClass Object ( [text] => 9 mins [value] => 517 ) [status] => OK ) [11] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.0 km [value] => 2029 ) [duration] => stdClass Object ( [text] => 6 mins [value] => 389 ) [status] => OK ) [12] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.7 km [value] => 2704 ) [duration] => stdClass Object ( [text] => 9 mins [value] => 562 ) [status] => OK ) [13] => stdClass Object ( [distance] => stdClass Object ( [text] => 1.8 km [value] => 1751 ) [duration] => stdClass Object ( [text] => 6 mins [value] => 332 ) [status] => OK ) [14] => stdClass Object ( [distance] => stdClass Object ( [text] => 2.5 km [value] => 2460 ) [duration] => stdClass Object ( [text] => 9 mins [value] => 519 ) [status] => OK ) [15] => stdClass Object ( [distance] => stdClass Object ( [text] => 4.1 km [value] => 4126 ) [duration] => stdClass Object ( [text] => 14 mins [value] => 811 ) [status] => OK ) [16] => stdClass Object ( [distance] => stdClass Object ( [text] => 5.3 km [value] => 5303 ) [duration] => stdClass Object ( [text] => 18 mins [value] => 1061 ) [status] => OK ) [17] => stdClass Object ( [distance] => stdClass Object ( [text] => 3.5 km [value] => 3500 ) [duration] => stdClass Object ( [text] => 11 mins [value] => 660 ) [status] => OK ) [18] => stdClass Object ( [distance] => stdClass Object ( [text] => 5.1 km [value] => 5122 ) [duration] => stdClass Object ( [text] => 17 mins [value] => 1038 ) [status] => OK ) ) ) ) 
+								
+								
+								
+								
+---------------------------------------------------------------------------------------------------------------------------------								
+[status] => OK ) 
