@@ -33,37 +33,9 @@
 </head>
 <body>
 <div id="floating-panel">
-    <b>Start: </b>
-    <select id="start">
-        
-        <option value="{lat: 27.712136, lng: 85.342559}">DWIT</option>
-        <option value="{lat: 27.67355299999999,lng: 85.31725100000001}">Reliance</option>
-<!--        <option value="joplin, mo">Joplin, MO</option>-->
-<!--        <option value="oklahoma city, ok">Oklahoma City</option>-->
-<!--        <option value="amarillo, tx">Amarillo</option>-->
-<!--        <option value="gallup, nm">Gallup, NM</option>-->
-<!--        <option value="flagstaff, az">Flagstaff, AZ</option>-->
-<!--        <option value="winona, az">Winona</option>-->
-<!--        <option value="kingman, az">Kingman</option>-->
-<!--        <option value="barstow, ca">Barstow</option>-->
-<!--        <option value="san bernardino, ca">San Bernardino</option>-->
-<!--        <option value="los angeles, ca">Los Angeles</option>-->
-    </select>
-    <b>End: </b>
+    <b>Destination</b>
     <select id="end">
-<!--        <option value="{lat: 27.712136, lng: 85.342559}">DWIT</option>-->
-        <option value="{lat: 27.67355299999999,lng: 85.31725100000001}">Reliance</option>
-
-        <!--        <option value="joplin, mo">Joplin, MO</option>-->
-<!--        <option value="oklahoma city, ok">Oklahoma City</option>-->
-<!--        <option value="amarillo, tx">Amarillo</option>-->
-<!--        <option value="gallup, nm">Gallup, NM</option>-->
-<!--        <option value="flagstaff, az">Flagstaff, AZ</option>-->
-<!--        <option value="winona, az">Winona</option>-->
-<!--        <option value="kingman, az">Kingman</option>-->
-<!--        <option value="barstow, ca">Barstow</option>-->
-<!--        <option value="san bernardino, ca">San Bernardino</option>-->
-<!--        <option value="los angeles, ca">Los Angeles</option>-->
+        
     </select>
 </div>
 <div id="map"></div>
@@ -83,14 +55,12 @@
             calculateAndDisplayRoute(directionsService, directionsDisplay);
 
         };
-        document.getElementById('start').addEventListener('change', onChangeHandler);
+//        document.getElementById('start').addEventListener('change', onChangeHandler);
         document.getElementById('end').addEventListener('change', onChangeHandler);
     }
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-//            destination: document.getElementById('end').value,
-//            origin: document.getElementById('start').value,
             origin:     {lat: 27.712136,lng: 85.342559},
             destination: {lat: 27.691221, lng: 85.31811900000001},
             travelMode: 'DRIVING'

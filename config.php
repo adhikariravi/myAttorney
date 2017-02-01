@@ -1,7 +1,7 @@
 <?php
 ini_set( "display_errors", false );
 date_default_timezone_set( "Australia/Sydney" );  // http://www.php.net/manual/en/timezones.php
-define( "DB_DSN", "mysql:host=localhost;dbname=cms" );
+define( "DB_DSN", "mysql:host=localhost;dbname=myAttorney" );
 define( "DB_USERNAME", "root" );
 define( "DB_PASSWORD", "nemesis" );
 define( "CLASS_PATH", "classes" );

@@ -13,7 +13,7 @@
                     session_start();
                     $_SESSION['userid']=$row['id'];
                     $_SESSION['username']=$row['username'];
-                    header('Location: viewLawyer.php');
+                    header('Location: index.php');
                 } else {
                     header('Location: login.php');
                 }

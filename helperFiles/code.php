@@ -1,4 +1,3 @@
-
 <?php require_once '../Database/dbconfig.php'; ?>
 
 <?php
@@ -44,7 +43,7 @@
     $destinationQuery="";
     foreach ($associates as $arr) {
         $destinationQuery.=$arr['lat'].",".$arr['lng']."|";
-        $destinations["{$arr['id']}"]=array('name'=>$arr['name'],'latlng'=>"{lat:{$arr['lat']}, lng: {$arr['lng']}}");
+        $destinations["{$arr['id']}"]=array('name'=>$arr['name'],'latlng'=>$arr['lat'].",".$arr['lng']);
         $distanceResult[]=array('id'=>$arr['id'],'name'=>$arr['name']);
     }
 
@@ -64,9 +63,10 @@
             $distanceResult[$count++]['distance']=$distanceArray->value;
         }
     }
+    echo "<br>";
 
    /**
-    *   Here, the co-ordinates are calcualted and preserved.
+    *   Here, the co-ordinates are calculated and preserved.
     *   Next, we create a map.
     *   And, Plot the co ordinates.
     */
@@ -117,39 +117,39 @@
     </div>
     <div class="container">
     <div id="floating-panel">
-        <input type="button" value="Get GeoLocation" onclick="">
+<!--        <input type="button" value="Get GeoLocation" onclick="">-->
         <b>Destination: </b>
-        <select id="end"> </select>
+        <select id="end">
+
             <?php
             /**
              * Use PHP to create a dynamic Select Menu
              */
             $menu_items=$destinations;
-            die(print_r($menu_items));
             foreach ($menu_items as $option) {
-//                echo "<option value=\"{$option['latlng']}\">{$option['name']}</option>";
-                print_r($option);
-                echo "<hr>";
+                echo "<option value=".$option['latlng'].">{$option['name']}</option>";
             }
             ?>
-            <!--        <option value="{lat: 27.712136, lng: 85.342559}">DWIT</option>-->
-            <!--        <option value="{lat: 27.67355299999999,lng: 85.31725100000001}">Reliance</option>-->
-            <!--        <option value="joplin, mo">Joplin, MO</option>-->
-            <!--        <option value="oklahoma city, ok">Oklahoma City</option>-->
-            <!--        <option value="amarillo, tx">Amarillo</option>-->
-            <!--        <option value="gallup, nm">Gallup, NM</option>-->
-            <!--        <option value="flagstaff, az">Flagstaff, AZ</option>-->
-            <!--        <option value="winona, az">Winona</option>-->
-            <!--        <option value="kingman, az">Kingman</option>-->
-            <!--        <option value="barstow, ca">Barstow</option>-->
-            <!--        <option value="san bernardino, ca">San Bernardino</option>-->
-            <!--        <option value="los angeles, ca">Los Angeles</option>-->
-<!--        </select>-->
+        </select>
     </div>
     <div id="map">
 
     </div>
 <script>
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    localAddress="";
+    function getPosition(position) {
+        localAddress+=position.coords.latitude+","+position.coords.longitude;
+    }
+
     function initMap() {
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -166,29 +166,32 @@
             calculateAndDisplayRoute(directionsService, directionsDisplay);
 
         };
-        document.getElementById('start').addEventListener('change', onChangeHandler);
         document.getElementById('end').addEventListener('change', onChangeHandler);
     }
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        origin=localAddress.split(",");
+//      origin: new google.maps.LatLng(origin[0],origin[1]),
+
+        destination_select=document.getElementById('end').value;
+        pos=destination_select.split(",");
+
         directionsService.route({
-            destination: document.getElementById('end').value,
-//            origin: document.getElementById('start').value,
             origin:     {lat: 27.712136,lng: 85.342559},
-//            destination: {lat: 27.691221, lng: 85.31811900000001},
+            destination: new google.maps.LatLng(pos[0],pos[1]),
             travelMode: 'DRIVING'
         }, function(response, status) {
             if (status === 'OK') {
                 directionsDisplay.setDirections(response);
             } else {
-                window.alert('Directions request failed due to ' + status);
+                window.alert('Failed' + status);
             }
         });
     }
 </script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeYHkcH0fGv8QOuZ_iBU8gbAv0dB36J8U&callback=initMap">
-</script>
-        </div>
-</body>
-</html>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeYHkcH0fGv8QOuZ_iBU8gbAv0dB36J8U&callback=initMap">
+    </script>
+</div>
+
+<?php require_once 'includes/footer.php' ?>

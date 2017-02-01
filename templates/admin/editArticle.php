@@ -1,23 +1,6 @@
 <?php include "header.php" ?>
 
-
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="./">myAttorney</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="./viewLawyer.php">View Lawyers</a></li>
-            <li><a href="./addLawyer.php">Add Lawyers</a></li>
-            <li><a href="./viewForum.php">View Forums</a></li>
-            <li><a href="./myAttorney/addForum.php">Add Forums</a></li>
-            <li><a href="./viewUser.php">View Users</a></li>
-            <li><a href="./addUser.php">Add Users</a></li>
-            <li><a href="./logout.php">logout</a></li>
-        </ul>
-    </div>
-</nav>
-
+<?php require_once "menu.php"?>
 <div class="container">
         <p>You are logged in as <b><?php echo htmlspecialchars( $_SESSION['username']) ?></b>. <a href="admin.php?action=logout"?>Log out</a></p>
 
@@ -63,7 +46,8 @@
       </form>
 
 <?php if ( $results['article']->id ) { ?>
-      <p><a href="admin.php?action=deleteArticle&amp;articleId=<?php echo $results['article']->id ?>" onclick="return confirm('Delete This Article?')">Delete This Article</a></p>
+      <p><a href="admin.php?action=deleteArticle&amp;articleId=<?php echo $results['article']->id ?>" onclick="return confirm('Delete This Article?')"><input
+                  type="button" value="Delete This Article" class="btn-danger" id="btn-del"></a></p>
 <?php } ?>
 
     </div>
